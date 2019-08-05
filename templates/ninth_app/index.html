@@ -1,15 +1,18 @@
-<!-- index.html -->
 <!DOCTYPE html>
 {% load staticfiles %}
 <html>
 <head>
-	<title>index</title>
+	<title>add details</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
 </head>
 <body>
 	<div class="container" >
-		<div class="jumbotron">
-			Hi
+		<div class="jumbotron" align="center">
+			<form method="post">
+				{{ form }}
+				{% csrf_token %}
+				<input type="submit" class = "btn btn-primary" name="submit">
+			</form>
 		</div>
 	</div>
 </body>
