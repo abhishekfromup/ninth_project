@@ -8,13 +8,17 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
 </head>
 <body>
-	<div class="container">
+	<div class="container" align="center">
 		<div class="jumbotron" align="center">
-			<h1>Here is the home page..</h1>
+			<h1>Here is the {% block page_name %} home {%endblock%} page..</h1>
+			<a class="btn btn-primary"  href="/ninth_app/home">home</a>
 			<a class="btn btn-primary" href="/ninth_app/get_record" role = "button"> Get Record </a>
 			<a class="btn btn-primary" href="/ninth_app/index" role = "button"> Add Record </a>
-
-
+		</div>
+		<div class="jumbotron">
+			{% block body_content %}
+				<img src="/static/images/employee_record.jpg">
+			{% endblock %}
 		</div>		
 	</div>
 </body>
