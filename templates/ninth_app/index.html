@@ -1,3 +1,24 @@
+{% extends 'ninth_app/home.html' %}
+
+{% block page_name %} index {% endblock %}
+
+{% block body_content %}
+	<form method="post">
+		{{ form }}
+		{% csrf_token %}
+		<input type="submit" class = "btn btn-primary" name="submit">
+	</form>	
+{% endblock %}
+
+
+
+
+
+
+
+
+
+<!-- 
 <!DOCTYPE html>
 {% load staticfiles %}
 <html>
@@ -18,3 +39,4 @@
 </body>
 </html>
 
+ -->
