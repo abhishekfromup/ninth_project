@@ -19,8 +19,8 @@
 						{% for data in record %}
 							<tr>
 								<td>{{ data.student_id }}</td>
-								<td>{{ data.student_name }}</td>
-								<td>{{ data.student_email }}</td>
+								<td>{{ data.student_name | upper }}</td>
+								<td>{{ data.student_email | upper }}</td>
 								<td>{{ data.student_date_of_birth }}</td>
 								<td>{{ data.student_mobile }}</td>
 							</tr>
